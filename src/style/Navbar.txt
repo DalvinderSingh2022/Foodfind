@@ -1,0 +1,58 @@
+nav {
+    @include flexCenter(row);
+    width: calc(100vw - 6rem);
+    padding: .8rem 3rem;
+    justify-content: space-around;
+    position: sticky;
+    margin: auto;
+    background-color: $orange-2;
+    top: 0;
+    z-index: 9999;
+
+    .logo {
+        @include flexCenter(row);
+        font-size: 1.6rem;
+        font-weight: 600;
+
+        span {
+            font-size: 1.8rem;
+            margin-right: 0.2rem;
+        }
+    }
+
+    .links {
+        @include flexCenter(row);
+        gap: 1rem;
+        list-style: none;
+        position: relative;
+
+        .line {
+            position: absolute;
+            height: 4px;
+            border-radius: 6px;
+            background-color: $orange-2;
+            top: 35px;
+        }
+
+        a {
+            @include hoverBottom(4px, 100%, $orange-1);
+            font-size: 1.2rem;
+            padding: .2rem .6rem;
+
+            &:hover {
+                color: $orange-1;
+            }
+
+            &.active {
+                color: $orange-1;
+                font-weight: 600;
+            }
+
+            span {
+                color: inherit;
+                margin-top: .4rem;
+                font-size: 1.8rem;
+            }
+        }
+    }
+}
