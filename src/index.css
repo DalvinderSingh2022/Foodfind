@@ -120,13 +120,13 @@ input {
 }
 
 nav {
-  width: calc(100vw - 6rem);
-  padding: .8rem 3rem;
+  padding: 1.5rem 0;
   position: sticky;
   margin: auto;
   background-color: var(--orange-2);
   top: 0;
   z-index: 9999;
+  box-shadow: 0 4px 42px var(--orange-2);
 }
 
 nav .logo {
@@ -148,16 +148,16 @@ nav .links {
 
 nav .links a {
   font-size: 1.2rem;
-  padding: .2rem .6rem;
-}
-
-nav .links a:hover {
-  color: var(--orange-1);
+  padding: 0.4rem 1.2rem;
+  background-color: var(--background-w);
+  color: var(--orange-2);
+  box-shadow: 0 2px 8px var(--background);
 }
 
 nav .links a.active {
-  color: var(--orange-1);
-  font-weight: 600;
+  color: var(--background);
+  box-shadow: var(--orange-3) 0px 8px 24px;
+  background-color: var(--orange-3);
 }
 
 nav a span {
@@ -233,6 +233,7 @@ section h1.bottom::before {
   border-radius: 8px;
   padding: 1rem;
   background-color: var(--background-w);
+  min-width: 290px;
 }
 
 .meals .meal .image_name {
@@ -267,6 +268,7 @@ section h1.bottom::before {
   grid-template-columns: repeat(auto-fit, minmax(90px, calc(100% / 4)));
   gap: .5rem;
   padding: .5rem 0;
+  justify-content: center;
 }
 
 .ingredients .ingredients_list .ingredient {
@@ -289,7 +291,7 @@ section h1.bottom::before {
 
 .start {
   flex-direction: row;
-  padding: 3rem;
+  padding: 2rem;
 }
 
 .start h1 {
@@ -328,11 +330,11 @@ section h1.bottom::before {
 }
 
 .category .circle {
-  border-radius: 44% 56% 43% 57% / 57% 0% 100% 43%;
+  border-radius: 80% 61% 49% 61% / 65% 0% 94% 55%;
   width: 240px;
   right: -24%;
-  bottom: 30%;
-  height: 90%;
+  bottom: 40%;
+  height: 520px;
 }
 
 .category .categories {
@@ -345,13 +347,13 @@ section h1.bottom::before {
 }
 
 .recipes .meals {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, calc(100% / 5)));
+  display: flex;
   gap: 1rem;
-  justify-content: center;
-  width: 100%;
   padding: 2rem 0;
   width: calc(100vw - 3rem);
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 

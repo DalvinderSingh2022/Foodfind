@@ -1,43 +1,36 @@
 import React, { useEffect } from "react";
-import StartSection from './components/StartSection';
-import CategorySection from './components/CategorySection';
-import RecipeSection from './components/RecipeSection';
-import Navbar from './components/Navbar'
-import Footer from './components/Footer'
-import useFetch from './components/useFetch'
-import Loading from "./components/Loading";
-import './index.css'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import Main from "./pages/Main";
+import Home from "./pages/Home";
+import NotFound from "./pages/NotFound";
+import RecipeDetail from "./pages/RecipeDetail";
 
 function App() {
-    const [isLoadingCate, isErrorCate, { categories }] = useFetch('/categories.php');
-    const [isLoadingRec, isErrorRec, { meals }] = useFetch('/random.php');
-
     useEffect(() => {
-        window.addEventListener("scroll", () => {
+        const animate = () => {
             document.querySelectorAll(".animate").forEach(element => {
-                (160 < (window.innerHeight) - (element.getBoundingClientRect().top)) ?
+                (150 < (window.innerHeight) - (element.getBoundingClientRect().top)) ?
                     element.classList.add("active") :
                     element.classList.remove("active");
+            });
+        }
+        animate();
+        window.addEventListener("scroll", animate);
 
-            })
-        })
         return () => window.removeEventListener("scroll", window);
     }, []);
 
-    if (isLoadingCate || isLoadingRec) {
-        return <Loading />;
-    }
-
     return (
-        <>
-            <Navbar />
-            <main>
-                <StartSection />
-                <CategorySection isError={isErrorCate} categories={categories} />
-                <RecipeSection isError={isErrorRec} meal={meals[0]} />
-            </main>
-            <Footer />
-        </>
+        <BrowserRouter>
+            <Routes>
+                <Route path="/" element={<Main />} >
+                    <Route index element={<Home />} />
+                    <Route path="recipes/:id" element={<RecipeDetail />} />
+                    <Route path="*" element={<NotFound />} />
+                </Route>
+            </Routes>
+        </BrowserRouter>
     );
 }
 
