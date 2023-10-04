@@ -19,4 +19,4 @@ function StartSection() {
         </section>);
 }
 
-export default StartSection; 
+export default StartSection;

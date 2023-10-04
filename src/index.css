@@ -35,7 +35,7 @@ img {
 }
 
 a {
-  text-decoration: none
+  text-decoration: none;
 }
 
 button,
@@ -105,9 +105,11 @@ input {
 
 .btn {
   background-color: var(--orange-3);
-  padding: 0.4rem 1rem;
-  border-radius: 20px;
+  border-radius: 80px;
   color: var(--background);
+  cursor: pointer;
+  padding: .6rem 2.4rem;
+  box-shadow: var(--orange-2) 0px 8px 24px;
 }
 
 .truncate {
@@ -139,25 +141,19 @@ nav .logo span {
   margin-right: 0.2rem;
 }
 
-
-nav .links {
-  gap: 1rem;
-  list-style: none;
-  position: relative;
-}
-
 nav .links a {
-  font-size: 1.2rem;
-  padding: 0.4rem 1.2rem;
-  background-color: var(--background-w);
-  color: var(--orange-2);
-  box-shadow: 0 2px 8px var(--background);
+  padding: 0.8rem 1.8rem;
+  color: var(--color-1);
+  background-color: var(--orange-2);
+  font-weight: 600;
+  text-transform: uppercase;
 }
 
 nav .links a.active {
-  color: var(--background);
-  box-shadow: var(--orange-3) 0px 8px 24px;
+  color: var(--background-w);
   background-color: var(--orange-3);
+  box-shadow: var(--orange-3) 0px 8px 24px;
+  font-weight: normal;
 }
 
 nav a span {
@@ -221,19 +217,12 @@ section h1.bottom::before {
   transform: scale(.95);
 }
 
-.pageLink {
-  cursor: pointer;
-  padding: .6rem 2.4rem;
-  box-shadow: var(--orange-2) 0px 8px 24px;
-}
-
-
 .meals .meal {
   box-shadow: var(--shadow) 0px 8px 24px;
   border-radius: 8px;
   padding: 1rem;
   background-color: var(--background-w);
-  min-width: 290px;
+  width: 290px;
 }
 
 .meals .meal .image_name {
@@ -412,45 +401,39 @@ footer:before {
   transform: translateY(0);
 }
 
-.loading {
-  height: 100vh;
-  width: 100vw;
-  position: relative;
-  overflow: hidden;
+/* recipes page */
+
+.filters {
+  margin: 2em auto -2em;
+  flex-wrap: wrap;
+  gap: 2em;
+}
+
+.filters input {
+  color: var(--color-1);
   background-color: var(--orange-1);
-  z-index: -99;
+  font-size: 1.1em;
+  padding: 0.8em 1.8em;
+  width: 100%;
+  border: 2px solid var(--orange-1);
+  outline: none;
+  border-radius: 60px;
 }
 
-.loading .circle-3 {
-  border-radius: 44% 56% 43% 57% / 57% 28% 100% 43%;
-  width: 73%;
-  right: -20%;
-  bottom: -10%;
-  height: 67%;
+.filters .search {
+  position: relative;
+  max-width: 920px;
+  min-width: 360px;
 }
 
-.loading .circle-1 {
-  border-radius: 44% 56% 43% 57% / 57% 28% 100% 43%;
-  width: 73%;
-  left: -20%;
-  top: -10%;
-  height: 67%;
+.filters select {
+  border: none;
+  outline: none;
 }
 
-.loading .circle-2 {
-  border-radius: 44% 56% 43% 57% / 57% 28% 100% 43%;
-  width: 75%;
-  left: 60%;
-  top: -10%;
-  height: 50%;
-}
-
-.loading .circle-4 {
-  border-radius: 44% 56% 43% 57% / 57% 28% 100% 43%;
-  width: 75%;
-  right: 60%;
-  bottom: -10%;
-  height: 50%;
+.filters option {
+  background-color: var(--orange-1);
+  color: var(--color-1);
 }
 
 @keyframes movingUpDown {

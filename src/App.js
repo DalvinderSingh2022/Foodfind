@@ -1,36 +1,41 @@
-import React, { useEffect } from "react";
+import React, { createContext, useCallback, useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Main from "./pages/Main";
 import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
 import RecipeDetail from "./pages/RecipeDetail";
+import Recipes from './pages/Recipes';
+
+export const AppContext = createContext();
 
 function App() {
-    useEffect(() => {
-        const animate = () => {
-            document.querySelectorAll(".animate").forEach(element => {
-                (150 < (window.innerHeight) - (element.getBoundingClientRect().top)) ?
-                    element.classList.add("active") :
-                    element.classList.remove("active");
-            });
-        }
-        animate();
-        window.addEventListener("scroll", animate);
-
-        return () => window.removeEventListener("scroll", window);
+    const animate = useCallback(() => {
+        document.querySelectorAll(".animate").forEach(element => {
+            (70 < (window.innerHeight) - (element.getBoundingClientRect().top)) ?
+                element.classList.add("active") :
+                element.classList.remove("active");
+        });
     }, []);
 
+    useEffect(() => {
+        window.addEventListener("scroll", animate);
+        return () => window.removeEventListener("scroll", window);
+    }, [animate]);
+
     return (
-        <BrowserRouter>
-            <Routes>
-                <Route path="/" element={<Main />} >
-                    <Route index element={<Home />} />
-                    <Route path="recipes/:id" element={<RecipeDetail />} />
-                    <Route path="*" element={<NotFound />} />
-                </Route>
-            </Routes>
-        </BrowserRouter>
+        <AppContext.Provider value={animate}>
+            <BrowserRouter>
+                <Routes>
+                    <Route path="/" element={<Main />} >
+                        <Route index element={<Home />} />
+                        <Route path="recipes/:id" element={<RecipeDetail />} />
+                        <Route path="recipes" element={<Recipes />} />
+                        <Route path="*" element={<NotFound />} />
+                    </Route>
+                </Routes>
+            </BrowserRouter>
+        </AppContext.Provider>
     );
 }
 

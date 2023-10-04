@@ -1,15 +1,15 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 function Navbar() {
     return (
         <nav className='flex j_around animate top'>
-            <Link className="logo flex" to='/'>
+            <NavLink className="logo flex" to='/'>
                 <span className="material-symbols-rounded">restaurant_menu</span> findfood
-            </Link>
+            </NavLink>
             <div className="links flex">
-                <a className="hover btn" href='#category'>Category</a>
-                <a className="hover btn" href='#recipes'>Recipes</a>
+                <NavLink className="hover btn" to='category'>Category</NavLink>
+                <NavLink className="hover btn" to='recipes'>Recipes</NavLink>
             </div>
         </nav >
     )

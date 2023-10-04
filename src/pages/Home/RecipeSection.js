@@ -1,5 +1,6 @@
 import React from 'react';
-import MealCard from '../../components/MealCard';
+import RandomMeal from '../../components/RandomMeal';
+import { Link } from 'react-router-dom';
 
 function RecipeSection() {
     return (
@@ -7,10 +8,10 @@ function RecipeSection() {
             <h1 className='bottom animate right'>Trending Dishes</h1>
             <div className="meals">
                 {Array.apply(null, Array(3)).map((num, index) => {
-                    return <MealCard key={index} />
+                    return <RandomMeal key={index} />
                 })}
             </div>
-            <span className='pageLink btn'>Explore More</span>
+            <Link to='/recipes' className='btn'>Explore More</Link>
         </section >
     );
 }
