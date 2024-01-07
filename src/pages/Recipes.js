@@ -1,4 +1,5 @@
-import React, { useCallback, useEffect, useState } from 'react'
+import React, { useCallback, useEffect, useState } from 'react';
+
 import MealCard from '../components/MealCard';
 import useFetch from '../components/useFetch';
 
@@ -47,7 +48,7 @@ const Recipes = () => {
             </section>
             <section className='recipes flex col'>
                 <div className="meals">
-                    {recipes && recipes.filter(a => a.strCategory === category || !category).map(recipe => <MealCard meal={recipe} />)}
+                    {recipes && recipes.filter(a => a.strCategory === category || !category).map(recipe => <MealCard meal={recipe} key={recipe.idMeal} />)}
                 </div>
             </section >
         </>)

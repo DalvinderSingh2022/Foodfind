@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+
 import StartSection from './StartSection';
 import CategorySection from './CategorySection';
 import RecipeSection from './RecipeSection';

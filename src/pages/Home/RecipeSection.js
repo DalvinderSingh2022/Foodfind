@@ -1,6 +1,8 @@
 import React from 'react';
-import RandomMeal from '../../components/RandomMeal';
+
 import { Link } from 'react-router-dom';
+
+import RandomMeal from '../../components/RandomMeal';
 
 function RecipeSection() {
     return (

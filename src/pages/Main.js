@@ -1,6 +1,8 @@
 import React, { useContext } from 'react';
-import Navbar from '../components/Navbar';
+
 import { Outlet } from 'react-router-dom';
+
+import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { AppContext } from '../App';
 
