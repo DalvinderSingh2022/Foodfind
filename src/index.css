@@ -129,7 +129,7 @@ input {
 
 nav {
   padding: 1.5rem 0;
-  position: sticky;
+  position: relative;
   margin: auto;
   background-color: var(--orange-2);
   top: 0;
@@ -140,6 +140,7 @@ nav {
 nav .logo {
   font-size: 1.6rem;
   font-weight: 600;
+  gap: 4px;
 }
 
 nav .logo span {
@@ -148,18 +149,20 @@ nav .logo span {
 }
 
 nav .links a {
-  padding: 0.8rem 1.8rem;
+  font-size: 1.1em;
+  padding: 0.4rem 1rem;
   color: var(--color-1);
-  background-color: var(--orange-2);
-  font-weight: 600;
-  text-transform: uppercase;
+  background-color: transparent;
+  letter-spacing: 1px;
+  margin: 0 .4em;
+  border: 4px solid var(--orange-2);
 }
 
-nav .links a.active {
+nav .links a.active,
+nav .links a:hover {
+  border-radius: 4px;
   color: var(--background-w);
-  background-color: var(--orange-3);
-  box-shadow: var(--orange-3) 0px 8px 24px;
-  font-weight: normal;
+  border-bottom-color: var(--background);
 }
 
 nav a span {
