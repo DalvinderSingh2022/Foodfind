@@ -467,6 +467,28 @@ main.recipe ol li::marker {
   font-size: 2em;
 }
 
+.loading {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  background-color: var(--orange-1);
+  z-index: 99999;
+  backdrop-filter: opacity(0.5);
+}
+
+.loading .circle {
+  width: 120px;
+  border-radius: 53% 47% 50% 50% / 42% 58% 62% 58%;
+  animation: movingUpDown .4s ease infinite alternate-reverse;
+}
+
+.loading h1 {
+  color: var(--orange-2);
+  text-shadow: 1px -1px 4px var(--orange-2);
+  text-transform: capitalize;
+  animation: movingUpDown 4s ease infinite alternate-reverse;
+}
 
 @keyframes movingUpDown {
   0% {

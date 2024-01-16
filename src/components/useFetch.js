@@ -11,9 +11,9 @@ function useFetch(url) {
                 const response = await fetch('https://www.themealdb.com/api/json/v1/1' + url);
                 const result = await response.json();
                 SetData(result);
-                setIsLoading(false)
+                setIsLoading(false);
             } catch (error) {
-                setIsError(true);
+                setIsError(error.message);
                 setIsLoading(false);
             }
         }

@@ -1,7 +1,7 @@
 import React, { createContext, useCallback, useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import Main from "./pages/Main";
+import Layout from "./pages/Layout";
 import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
 import RecipeDetail from "./pages/RecipeDetail";
@@ -20,14 +20,18 @@ function App() {
 
     useEffect(() => {
         window.addEventListener("scroll", animate);
-        return () => window.removeEventListener("scroll", window);
+        window.addEventListener("resize", animate);
+        return () => {
+            window.removeEventListener("scroll", window);
+            window.addEventListener("resize", animate);
+        };
     }, [animate]);
 
     return (
         <AppContext.Provider value={animate}>
             <BrowserRouter>
                 <Routes>
-                    <Route path="/" element={<Main />} >
+                    <Route path="/" element={<Layout />} >
                         <Route index element={<Home />} />
                         <Route path="recipes/:id" element={<RecipeDetail />} />
                         <Route path="recipes" element={<Recipes />} />

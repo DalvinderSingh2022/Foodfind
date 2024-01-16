@@ -16,7 +16,6 @@ function Navbar() {
                 <IoRestaurantSharp /> findfood
             </NavLink>
             <div className="links flex">
-                <NavLink className="hover btn" to='saved'>Saved</NavLink>
                 <NavLink className="hover btn" to='recipes'>Recipes</NavLink>
             </div>
         </nav >
