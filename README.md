@@ -1,70 +1,74 @@
-# Getting Started with Create React App
+# FindFood
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to FindFood, a web application that helps users discover delicious recipes based on their preferences and dietary requirements. This README provides an overview of the application's functionality, features, setup instructions, and usage details.
 
-## Available Scripts
+## Functionality
 
-In the project directory, you can run:
+FindFood offers the following key features:
 
-### `npm start`
+1. **Recipe Search**: Users can search for recipes by entering keywords, ingredients, or dish names in the search bar.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+2. **Filter by Category**: Users can filter recipes based on Category such as vegetarian, vegan, beef, etc.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+3. **Recipe Details**: Clicking on a specific recipe will display detailed information, including ingredients and instructions.
 
-### `npm test`
+4. **Responsive Design**: The application is designed to be responsive, providing a seamless experience across various devices.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Preview
 
-### `npm run build`
+### Home page
+![image](https://github.com/DalvinderSingh2022/Foodfind/assets/110463060/f9c7bb2f-b3df-4fbc-b027-0ddf240f0fa2)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Recipes Page
+![image](https://github.com/DalvinderSingh2022/Foodfind/assets/110463060/a05c096e-cb49-47b0-a266-7c885521c536)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Recipe`s Details
+![image](https://github.com/DalvinderSingh2022/Foodfind/assets/110463060/1deca48e-ed94-4c9b-8404-550706ca4b06)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## Technologies Used
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+FindFood is built using the following technologies:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **React**: for building the user interface.
+- **CSS#**: For styling and layout.
+- **JavaScript**: For dynamic behaviour and API interactions.
+- **TheMealDB** API: To fetch recipe details data. ([TheMealDB](https://www.themealdb.com/api.php))
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Getting Started
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+To set up the project locally, follow these steps:
 
-## Learn More
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/your-username/findfood.git
+   cd findfood
+   ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+2. **Install Dependencies**:
+   ```bash
+   npm install
+   ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+3. **Start the Application**:
+   ```bash
+   npm start
+   ```
 
-### Code Splitting
+4. **Open in Browser**:
+   Open your web browser and navigate to [http://localhost:3000](http://localhost:3000) to access the FindFood application.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Usage
 
-### Analyzing the Bundle Size
+1. **Search for Recipes**:
+   Enter keywords, ingredients, or dish names in the search bar and click "Search Icon" to find recipes.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+2. **Filter Recipes**:
+   Use the dietary preferences filter to refine your search based on specific requirements.
 
-### Making a Progressive Web App
+3. **View Recipe Details**:
+   Click on a specific recipe to view detailed information, including ingredients, instructions, and nutritional information.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Thank you for exploring FindFood! If you have any questions or encounter any issues, please don't hesitate to reach out.
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Happy cooking! 🍲
