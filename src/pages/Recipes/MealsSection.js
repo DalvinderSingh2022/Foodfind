@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 
 import MealCard from '../../components/MealCard';
 import useFetch from '../../components/useFetch';
