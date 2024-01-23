@@ -1,6 +1,6 @@
 # FindFood
 
-Welcome to FindFood, a web application that helps users discover delicious recipes based on their preferences and dietary requirements. This README provides an overview of the application's functionality, features, setup instructions, and usage details.
+Welcome to FindFood, a web application that helps users discover delicious recipes based on their preferences and requirements. This README provides an overview of the application's functionality, features, setup instructions, and usage details.
 
 ## Functionality
 
@@ -41,7 +41,7 @@ To set up the project locally, follow these steps:
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/your-username/findfood.git
+   git clone https://github.com/DalvindeSingh2022/Findfood.git
    cd findfood
    ```
 
