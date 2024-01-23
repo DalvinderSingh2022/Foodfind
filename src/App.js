@@ -5,7 +5,7 @@ import Layout from "./pages/Layout";
 import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
 import RecipeDetail from "./pages/RecipeDetail";
-import Recipes from './pages/Recipes';
+import Recipes from './pages/Recipes/Recipes';
 
 export const AppContext = createContext();
 
@@ -23,7 +23,7 @@ function App() {
         window.addEventListener("resize", animate);
         return () => {
             window.removeEventListener("scroll", window);
-            window.addEventListener("resize", animate);
+            window.removeEventListener("resize", window);
         };
     }, [animate]);
 

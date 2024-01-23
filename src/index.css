@@ -418,21 +418,33 @@ footer:before {
   gap: 2em;
 }
 
-.filters input {
-  color: var(--color-1);
-  background-color: var(--orange-1);
-  font-size: 1.1em;
-  padding: 0.8em 1.8em;
-  width: 100%;
-  border: 2px solid var(--orange-1);
-  outline: none;
-  border-radius: 60px;
-}
-
 .filters .search {
   position: relative;
   max-width: 920px;
-  min-width: 360px;
+  background-color: var(--orange-1);
+  padding: 0.8em;
+  border-radius: 60px;
+  height: 40px;
+}
+
+.filters .search input {
+  color: var(--color-1);
+  background-color: inherit;
+  font-size: 1.1em;
+  padding: 0 0.6em;
+  width: 100%;
+  border: none;
+  outline: none;
+}
+
+.filters .search button {
+  padding: 0;
+  height: 100%;
+  aspect-ratio: 1;
+}
+
+.filters .search button svg {
+  fill: var(--orange-1);
 }
 
 .filters select {
