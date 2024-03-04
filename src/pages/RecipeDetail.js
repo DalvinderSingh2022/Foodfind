@@ -5,7 +5,7 @@ import { useParams } from 'react-router-dom';
 import useFetch from '../components/useFetch';
 import Ingredients from '../components/Ingredients';
 import { AppContext } from '../App';
-import Loading from '../components/Loading';
+// import Loading from '../components/Loading';
 import Error from '../components/Error';
 
 function RecipeDetail() {
@@ -18,9 +18,9 @@ function RecipeDetail() {
         return <Error msg={isError} />
     }
 
-    // if (isLoading) {
-    //     return <Loading />
-    // }
+    if (isLoading) {
+        return <></>
+    }
 
     if (!isError) {
         return (

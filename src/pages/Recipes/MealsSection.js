@@ -3,7 +3,7 @@ import React from 'react';
 import MealCard from '../../components/MealCard';
 import useFetch from '../../components/useFetch';
 import Error from '../../components/Error';
-import Loading from '../../components/Loading';
+// import Loading from '../../components/Loading';
 
 const MealsSection = ({ category, search }) => {
     const [isLoading, isError, { meals: recipes }] = useFetch(`/search.php?s=${search}`);
@@ -12,9 +12,9 @@ const MealsSection = ({ category, search }) => {
         return <Error msg={isError} />
     }
 
-    // if (isLoading) {
-    //     return <Loading />
-    // }
+    if (isLoading) {
+        return <></>
+    }
 
     if (!isError) {
         return (

@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 
 import { AppContext } from '../App';
 
-import { IoRestaurantSharp } from "react-icons/io5";
+// import { IoRestaurantSharp } from "react-icons/io5";
 
 function Navbar() {
     const animate = useContext(AppContext);
