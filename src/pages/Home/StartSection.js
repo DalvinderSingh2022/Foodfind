@@ -6,7 +6,7 @@ function StartSection() {
         <section className='start flex'>
             <div className='text animate left'>
                 <h1>Let's Start Cooking With Popoular Recipes
-                    <div className="circle animate top"></div>
+                    {/* <div className="circle animate top"></div> */}
                 </h1>
                 <p className='animate left'>Want to learn cook but confused how to start ?</p>
                 <p className='animate left'>No need to worry again !</p>

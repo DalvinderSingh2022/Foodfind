@@ -13,9 +13,11 @@ function Navbar() {
     return (
         <nav className='flex j_around animate top'>
             <NavLink className="logo flex" to='/'>
-                <IoRestaurantSharp /> findfood
+                {/* <IoRestaurantSharp /> */}
+                findfood
             </NavLink>
             <div className="links flex">
+                <NavLink className="hover btn" to='/'>Home</NavLink>
                 <NavLink className="hover btn" to='recipes'>Recipes</NavLink>
             </div>
         </nav >

@@ -18,9 +18,9 @@ function RecipeDetail() {
         return <Error msg={isError} />
     }
 
-    if (isLoading) {
-        return <Loading />
-    }
+    // if (isLoading) {
+    //     return <Loading />
+    // }
 
     if (!isError) {
         return (

@@ -8,7 +8,7 @@ const index = () => {
     return (
         <main>
             <StartSection />
-            <CategorySection />
+            {/* <CategorySection /> */}
             <RecipeSection />
         </main>
     )
