@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 
 import { AppContext } from '../App';
 
-// import { IoRestaurantSharp } from "react-icons/io5";
+import { IoRestaurantSharp } from "react-icons/io5";
 
 function Navbar() {
     const animate = useContext(AppContext);
@@ -13,7 +13,7 @@ function Navbar() {
     return (
         <nav className='flex j_around animate top'>
             <NavLink className="logo flex" to='/'>
-                {/* <IoRestaurantSharp /> */}
+                <IoRestaurantSharp />
                 findfood
             </NavLink>
             <div className="links flex">

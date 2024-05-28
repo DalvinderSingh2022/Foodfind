@@ -316,7 +316,7 @@ main:not(.recipe) .start .image img {
   width: 60%;
   left: -30%;
   top: -50%;
-  animation: circleRadius 2s ease infinite alternate-reverse;
+  animation: circleRadius 16s ease infinite alternate-reverse;
 }
 
 
