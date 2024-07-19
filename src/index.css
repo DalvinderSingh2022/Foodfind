@@ -372,19 +372,19 @@ footer:before {
   height: 180%;
   bottom: 0;
   z-index: -99;
-  /* animation: footer 1s ease infinite alternate; */
+  animation: footer 1s ease infinite alternate;
 }
 
 
-/* .animate {
+.animate {
   opacity: 0;
   transition: 1s ease;
 }
 
 .active.animate {
   opacity: 1;
-} */
-/* 
+}
+
 .animate.right {
   transform: translateX(100px);
 }
@@ -409,7 +409,7 @@ footer:before {
 .active.animate.top,
 .active.animate.Bottom {
   transform: translateY(0);
-} */
+}
 
 
 .filters {
@@ -464,7 +464,7 @@ main.recipe .start .image {
   margin: 1em 4em 0;
   border-radius: 53% 47% 50% 50% / 42% 38% 62% 58%;
   overflow: hidden;
-  /* animation: circleRadius 5s ease infinite alternate-reverse; */
+  animation: circleRadius 5s ease infinite alternate-reverse;
 }
 
 main.recipe .start h1 {

@@ -19,7 +19,7 @@ function RecipeDetail() {
     }
 
     if (isLoading) {
-        return <Loading/>
+        return <Loading />
     }
 
     if (!isError) {
